@@ -1,0 +1,9 @@
+<fieldset [formGroup]="configFormGroup">
+  <legend>Config</legend>
+  Maximum speed
+  <input type="text" [formControlName]="'maxSpeed'" />
+
+  Number of canons
+  <input type="text" [formControl]="configFormGroup.controls.nbCanons" />
+</fieldset>
+<pre>{{ configFormGroup.controls.nbCanons.errors | json }}</pre>

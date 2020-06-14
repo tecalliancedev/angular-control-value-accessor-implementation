@@ -1,0 +1,15 @@
+<form [formGroup]="internalFormGroup">
+  <fieldset>
+    <legend>Spaceship</legend>
+    Name <input type="text" [formControlName]="'name'" />
+
+    Built in year <input type="number" [formControlName]="'builtInYear'" />
+
+    <app-spaceship-config [formControl]="internalFormGroup.controls.config"></app-spaceship-config>
+
+    <button>Save</button>
+  </fieldset>
+</form>
+
+<pre>{{ internalFormGroup.value | json }}</pre>
+<pre>{{ internalFormGroup.controls.config.errors| json }}</pre>
