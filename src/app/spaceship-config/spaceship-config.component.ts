@@ -6,19 +6,7 @@ import { takeUntil, tap } from 'rxjs/operators';
 @Component({
   selector: 'app-spaceship-config',
   templateUrl: './spaceship-config.component.html',
-  styleUrls: ['./spaceship-config.component.scss'],
-  providers: [
-    // {
-    //   provide: NG_VALUE_ACCESSOR,
-    //   useExisting: forwardRef(() => SpaceshipConfigComponent),
-    //   multi: true,
-    // },
-    // {
-    //   provide: NG_VALIDATORS,
-    //   useExisting: forwardRef(() => SpaceshipConfigComponent),
-    //   multi: true,
-    // }
-  ]
+  styleUrls: ['./spaceship-config.component.scss']
 })
 export class SpaceshipConfigComponent implements OnInit, OnDestroy, ControlValueAccessor {
   private onChange: (value: any) => void;
